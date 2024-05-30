@@ -1,0 +1,50 @@
+{
+  "name": "finance-api",
+  "version": "1.0.0",
+  "description": "Finance API for money and expenses management",
+  "main": "index.js",
+  "repository": "https://github.com/marcio-gomes-neto/finance-api.git",
+  "author": "Márcio Gomes Neto",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start:dev": "nodemon",
+    "ts-build": "tsc",
+    "ts-watch": "tsc --watch",
+    "lint": "eslint src/**",
+    "lint-fix": "eslint src/** --fix",
+    "lint-watch": "cls && esw --watch src/**",
+    "build": "del-cli --force ./build && tsc",
+    "clean": "del-cli --force ./build"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "@hapi/jwt": "^3.2.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/pg": "^8.11.6",
+    "bcrypt": "^5.1.1",
+    "boom": "^7.3.0",
+    "cpf-cnpj-validator": "^1.0.3",
+    "del-cli": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "envalid": "^8.0.0",
+    "eslint": "9.x",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5",
+    "typeorm": "^0.3.20",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@types/boom": "^7.3.5",
+    "@types/hapi-auth-jwt2": "^8.6.1",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.13",
+    "@types/uuid": "^9.0.8",
+    "globals": "^15.3.0",
+    "nodemon": "^3.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0"
+  }
+}
